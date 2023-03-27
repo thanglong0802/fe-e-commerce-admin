@@ -1,0 +1,21 @@
+.content {
+  padding: 10px 8px 10px 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.data-product {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+table {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+th,
+td {
+  border: 1px solid black;
+}

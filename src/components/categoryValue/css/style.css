@@ -1,0 +1,36 @@
+.name-crud h2 {
+  margin: 0;
+}
+
+.name-crud .crud {
+  background-color: #eee;
+  display: flex;
+  justify-content: flex-end;
+  height: 70px;
+}
+
+.crud a {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #fff;
+  width: 100px;
+}
+
+.crud a .img-crud {
+  height: 40px;
+  width: 40px;
+  padding-top: 5px;
+  margin: auto;
+}
+
+.crud a span {
+  text-align: center;
+  color: #000;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.crud a:hover {
+  background-color: #ddd;
+  text-decoration: none;
+}

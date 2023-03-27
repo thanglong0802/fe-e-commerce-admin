@@ -1,0 +1,13 @@
+.header {
+  background-color: #222;
+}
+
+/* .a-logo {
+  height: 70px;
+} */
+
+.logo {
+  height: 60px;
+  width: auto;
+  padding: 5px 0px 5px 15px;
+}

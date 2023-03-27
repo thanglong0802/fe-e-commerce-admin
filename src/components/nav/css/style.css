@@ -1,0 +1,7 @@
+.nav-category {
+  display: flex;
+  flex-direction: column;
+  padding: 2px 24px 24px 24px;
+  position: sticky;
+  top: 60px;
+}
