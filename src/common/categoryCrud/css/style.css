@@ -1,5 +1,13 @@
+.name-crud {
+  position: sticky;
+  top: 60px;
+  background-color: #fff;
+}
+
 .name-crud h2 {
   margin: 0;
+  text-transform: capitalize;
+  padding-top: 10px;
 }
 
 .name-crud .crud {

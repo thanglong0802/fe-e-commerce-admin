@@ -1,75 +1,56 @@
-import React from "react";
-import CategoryValue from "../categoryValue/CategoryValue";
-import Input from "../input/Input";
+import React, { useState } from "react";
+import Input from "../../common/input/Input";
+import CategoryCrud from "../../common/categoryCrud/CategoryCrud";
 import "./css/style.css";
 
 function Content() {
+  const fakeData = [
+    {
+      id: 1,
+      name: "May do huyet ap",
+      status: "CON HANG",
+    },
+    {
+      id: 2,
+      name: "May do nhiet do",
+      status: "CON HANG",
+    },
+    {
+      id: 3,
+      name: "Khau trang",
+      status: "CON HANG",
+    },
+  ];
+  const [data, setData] = useState(fakeData);
   return (
     <>
       <div className="content">
-        <CategoryValue />
-        <div style={{ border: "1px solid #ccc" }} className="data-product">
+        <CategoryCrud />
+        <div className="data-product">
           <div>
             <Input />
           </div>
           <div>
-            <table>
-              <thead>
-                <tr>
-                  <th>a</th>
-                  <th>a</th>
-                  <th>a</th>
-                  <th>a</th>
-                  <th>a</th>
-                  <th>a</th>
-                  <th>a</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>001</td>
-                  <td>
-                    <input type="checkbox" />
-                  </td>
-                  <td>Product 1</td>
-                  <td>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Donec quis vestibulum lacus.
-                  </td>
-                  <td>10</td>
-                  <td>$9.99</td>
-                  <td>$99.90</td>
-                </tr>
-                <tr>
-                  <td>002</td>
-                  <td>
-                    <input type="checkbox" />
-                  </td>
-                  <td>Product 2</td>
-                  <td>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Donec quis vestibulum lacus.
-                  </td>
-                  <td>5</td>
-                  <td>$19.99</td>
-                  <td>$99.95</td>
-                </tr>
-                <tr>
-                  <td>003</td>
-                  <td>
-                    <input type="checkbox" />
-                  </td>
-                  <td>Product 3</td>
-                  <td>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Donec quis vestibulum lacus.
-                  </td>
-                  <td>3</td>
-                  <td>$29.99</td>
-                  <td>$89.97</td>
-                </tr>
-              </tbody>
-            </table>
+            <form action="" method="post">
+              <table className="table table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">STT</th>
+                    <th scope="col">Ten danh muc</th>
+                    <th scope="col">Trang thai</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {data.map((product) => (
+                    <tr>
+                      <th scope="row">{product.id}</th>
+                      <td>{product.name}</td>
+                      <td>{product.status}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </form>
           </div>
           <div>
             <p>

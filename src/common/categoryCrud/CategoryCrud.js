@@ -1,7 +1,7 @@
 import React from "react";
 import "./css/style.css";
 
-function CategoryValue() {
+function CategoryCrud() {
   return (
     <div className="name-crud">
       <div>
@@ -38,4 +38,4 @@ function CategoryValue() {
   );
 }
 
-export default CategoryValue;
+export default CategoryCrud;

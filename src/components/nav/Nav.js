@@ -1,6 +1,6 @@
 import React from "react";
-import CategoryProduct from "../categoryProduct/CategoryProduct";
-import Input from "../input/Input";
+import Category from "../category/Category";
+import Input from "../../common/input/Input";
 import "./css/style.css";
 
 function Nav() {
@@ -8,7 +8,7 @@ function Nav() {
     <>
       <div className="nav-category">
         <Input />
-        <CategoryProduct />
+        <Category />
       </div>
     </>
   );

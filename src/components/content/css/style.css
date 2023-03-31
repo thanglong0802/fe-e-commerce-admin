@@ -1,5 +1,5 @@
 .content {
-  padding: 10px 8px 10px 15px;
+  padding: 0px 8px 10px 15px;
   display: flex;
   flex-direction: column;
 }
@@ -8,6 +8,8 @@
   margin-top: 16px;
   display: flex;
   flex-direction: column;
+  /* height: 730px;
+  overflow: scroll; */
 }
 
 table {

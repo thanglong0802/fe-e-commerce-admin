@@ -14,6 +14,8 @@ function App() {
           <Nav />
         </nav>
         <main>
+          {/* Thêm điều kiện để render nội dung nào của danh mục nào */}
+          {/* Thêm các component ContentX khác để cho từng danh mục */}
           <Content />
         </main>
       </div>

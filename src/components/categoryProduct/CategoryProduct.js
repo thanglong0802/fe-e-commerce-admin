@@ -1,49 +1,17 @@
-import React, { useState } from "react";
-import CategoryAttribute from "../categoryAttribute/CategoryAttribute";
+import React from "react";
+
 import "./css/style.css";
 
-function CategoryProduct() {
-  const [show, setShow] = useState(null);
-  const [isHidden, setIsHidden] = useState(true);
-  const categories = [
-    {
-      id: 1,
-      name: "Danh mục sản phẩm cha 1",
-      subCategories: ["Danh mục sản phẩm con 1a", "Danh mục sản phẩm con 1b"],
-    },
-    {
-      id: 2,
-      name: "Danh mục sản phẩm cha 2",
-      subCategories: ["Danh mục sản phẩm con 2a", "Danh mục sản phẩm con 2b"],
-    },
-  ];
-  const handleToggle = (element) => {
-    setIsHidden(!isHidden);
-    setShow(element);
-  };
+function CategoryProduct(props) {
+  const { subCategories, hide } = props;
   return (
-    <div className="product">
-      <ul className="ul-menu">
-        {categories.map((ele) => (
-          <li key={ele.id} className="li-product">
-            <a href="#m">
-              <span>{ele.name}</span>
-              <i
-                className="fa-solid fa-caret-down"
-                onClick={() => handleToggle(ele)}
-              ></i>
-            </a>
-
-            {show?.id === ele.id && (
-              <CategoryAttribute
-                subCategories={ele.subCategories}
-                hide={isHidden}
-              />
-            )}
-          </li>
-        ))}
-      </ul>
-    </div>
+    <ul className="ul-attribute" style={{ display: hide ? "none" : "block" }}>
+      {subCategories.map((ele) => (
+        <li>
+          <a href="#m">{ele}</a>
+        </li>
+      ))}
+    </ul>
   );
 }
 
