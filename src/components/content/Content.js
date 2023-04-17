@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Input from "../../common/input/Input";
-import CategoryCrud from "../../common/categoryCrud/CategoryCrud";
+import Search from "../../common/search/Search";
+import Crud from "../../common/crud/Crud";
 import "./css/style.css";
 
 function Content() {
@@ -25,10 +25,10 @@ function Content() {
   return (
     <>
       <div className="content">
-        <CategoryCrud />
+        <Crud />
         <div className="data-product">
           <div>
-            <Input />
+            <Search />
           </div>
           <div>
             <form action="" method="post">

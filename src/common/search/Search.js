@@ -1,7 +1,10 @@
 import React from "react";
 import "./css/style.css";
 
-function Input() {
+function Search() {
+  const handlePreviewDefault = (event) => {
+    event.preventDefault();
+  };
   return (
     <div className="search">
       <form action="#" method="get" className="search-form">
@@ -10,7 +13,11 @@ function Input() {
           className="search-input"
           placeholder="Tìm kiếm..."
         />
-        <button type="submit" className="search-button">
+        <button
+          type="submit"
+          className="search-button"
+          onClick={(event) => handlePreviewDefault(event)}
+        >
           <i className="fa fa-search"></i>
         </button>
       </form>
@@ -18,4 +25,4 @@ function Input() {
   );
 }
 
-export default Input;
+export default Search;
