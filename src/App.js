@@ -1,3 +1,4 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Content from "./components/content/Content";
 import Header from "./components/header/Header";
@@ -11,8 +12,11 @@ function App() {
       </header>
       <div className="nav-content">
         <nav>
-          <Nav />
+          <Routes>
+            <Route index element={<Nav />}></Route>
+          </Routes>
         </nav>
+
         <main>
           {/* Thêm điều kiện để render nội dung nào của danh mục nào */}
           {/* Thêm các component ContentX khác để cho từng danh mục */}

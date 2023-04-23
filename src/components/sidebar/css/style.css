@@ -1,0 +1,40 @@
+h2#side-bar {
+  font-size: 25px;
+  text-align: left;
+}
+
+.side-bar-cate .ul-cate {
+}
+
+.ul-cate > li {
+  list-style: none;
+  border-bottom: 1px solid #000;
+}
+
+.li-cate {
+  display: flex;
+  flex-direction: column;
+}
+
+.li-cate .parent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.li-cate .parent a {
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.li-cate .parent img {
+  height: 16px;
+  width: auto;
+  align-self: center;
+}
+
+.li-cate .parent img:hover {
+  cursor: pointer;
+}

@@ -1,27 +1,24 @@
-// Giá trị khởi tạo cho state
 const initialState = {
-  fakeCategory: [
-    {
-      id: 1,
-      name: "Danh mục sản phẩm cha 1",
-      subCategories: ["Danh mục sản phẩm con 1a", "Danh mục sản phẩm con 1b"],
-    },
-    {
-      id: 2,
-      name: "Danh mục sản phẩm cha 2",
-      subCategories: ["Danh mục sản phẩm con 2a", "Danh mục sản phẩm con 2b"],
-    },
-  ],
+  category: [],
+  childCategory: [],
 };
 
 function categoryReducer(state = initialState, action) {
   switch (action.type) {
-    case "show_category":
+    case "GET_LIST_CATEGORY":
+      console.log("reducer parent cate: " + JSON.stringify(action.payload));
       return {
-        fakeCategory: [...state.fakeCategory],
+        ...state,
+        category: action.payload,
       };
+    case "GET_LIST_CHILD_CATEGORY": {
+      return {
+        ...state,
+        childCategory: action.payload,
+      };
+    }
     default:
-      return state.fakeCategory;
+      return state;
   }
 }
 

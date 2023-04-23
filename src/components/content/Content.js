@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Search from "../../common/search/Search";
 import Crud from "../../common/crud/Crud";
+import Search from "../../common/search/Search";
 import "./css/style.css";
 
 function Content() {
