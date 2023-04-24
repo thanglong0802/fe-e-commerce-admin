@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Crud from "../../common/crud/Crud";
 import Search from "../../common/search/Search";
 import "./css/style.css";
+import { Outlet } from "react-router-dom";
 
 function Content() {
   const fakeData = [
@@ -133,6 +134,9 @@ function Content() {
             </p>
           </div>
         </div>
+      </div>
+      <div id="detail">
+        <Outlet />
       </div>
     </>
   );

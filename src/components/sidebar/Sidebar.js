@@ -6,6 +6,7 @@ import {
 } from "../../app/actons/categoryAction";
 import ChildCategory from "../childCategory/ChildCategory";
 import "./css/style.css";
+import { Link } from "react-router-dom";
 
 function Sidebar() {
   const [toggle, setToggle] = useState(false);
@@ -36,11 +37,7 @@ function Sidebar() {
           {categoryList.map((parent) => (
             <li key={parent.id} className="li-cate">
               <div className="parent">
-                <a href="#">{parent.name}</a>
-                {/* <i
-                className="fa-solid fa-caret-down"
-                onClick={() => handleToggle(parent.id)}
-              ></i> */}
+                <Link to={`/category/${parent.id}`}>{parent.name}</Link>
                 <img
                   src={`${process.env.PUBLIC_URL}/assets/down-arrow.png`}
                   alt=""

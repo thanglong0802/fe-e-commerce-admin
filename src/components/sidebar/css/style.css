@@ -1,6 +1,7 @@
 h2#side-bar {
   font-size: 25px;
   text-align: left;
+  color: #8d8e94;
 }
 
 .side-bar-cate .ul-cate {
@@ -24,9 +25,13 @@ h2#side-bar {
 .li-cate .parent a {
   height: 40px;
   line-height: 40px;
-  color: #fff;
+  color: #8d8e94;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.li-cate .parent a:hover {
+  color: #fff;
 }
 
 .li-cate .parent img {
