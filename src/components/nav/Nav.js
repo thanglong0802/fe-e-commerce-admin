@@ -32,7 +32,7 @@ function Nav() {
     }
   };
   return (
-    <div className="nav-category">
+    <div className="navabar">
       <div className="search">
         <form action="#" method="get" className="search-form">
           <input

@@ -14,6 +14,13 @@ export const getListChildCategory = (response) => {
   };
 };
 
+export const getAllProductByIdCategory = (response) => {
+  return {
+    type: "GET_ALL_PRODUCT_BY_ID_CATEGORY",
+    payload: response,
+  };
+};
+
 export const getListCategory = () => {
   const fetchListCategory = async (dispatch) => {
     try {
@@ -30,11 +37,23 @@ export const getListChildCate = (id) => {
   const fetchListChildCate = async (dispatch) => {
     try {
       let response = await api.get(`/category/${id}`);
-      console.log("reducer child cate: " + JSON.stringify(response.data));
       dispatch(getListChildCategory(response.data));
     } catch (error) {
       console.log(error);
     }
   };
   return fetchListChildCate;
+};
+
+export const getAllProduct = (id) => {
+  const fetchGetAllProduct = async (dispatch) => {
+    try {
+      let response = await api.get(`/category/all-product/${id}`);
+      console.log("Product by cateogry: " + JSON.stringify(response.data));
+      dispatch(getAllProductByIdCategory(response.data));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  return fetchGetAllProduct;
 };

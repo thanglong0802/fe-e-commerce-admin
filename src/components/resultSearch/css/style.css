@@ -1,0 +1,11 @@
+.result-search ul > li {
+  list-style: none;
+  height: 40px;
+  line-height: 40px;
+  text-transform: capitalize;
+}
+
+.result-search ul li:hover {
+  cursor: pointer;
+  color: #fff;
+}

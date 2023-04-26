@@ -37,7 +37,9 @@ function Sidebar() {
           {categoryList.map((parent) => (
             <li key={parent.id} className="li-cate">
               <div className="parent">
-                <Link to={`/category/${parent.id}`}>{parent.name}</Link>
+                <Link to={`/category/all-product/${parent.id}`}>
+                  {parent.name}
+                </Link>
                 <img
                   src={`${process.env.PUBLIC_URL}/assets/down-arrow.png`}
                   alt=""

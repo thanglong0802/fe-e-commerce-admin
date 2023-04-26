@@ -14,9 +14,9 @@ function ChildCategory(props) {
       {childCate.map((child) => {
         if (child.parent_id) {
           return (
-            <Link to="/addCategory">
-              <li>{child.name}</li>
-            </Link>
+            <li key={child.id}>
+              <Link to="/addCategory">{child.name}</Link>
+            </li>
           );
         }
       })}

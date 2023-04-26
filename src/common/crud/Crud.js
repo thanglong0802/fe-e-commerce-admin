@@ -1,11 +1,12 @@
 import React from "react";
 import "./css/style.css";
 
-function CategoryCrud() {
+function CategoryCrud(props) {
+  const { res } = props;
   return (
     <div className="name-crud">
       <div>
-        <h2>Danh mục</h2>
+        <h2>{res.name}</h2>
         <hr />
       </div>
       <div className="crud">

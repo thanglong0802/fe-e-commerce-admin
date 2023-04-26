@@ -1,10 +1,15 @@
-.ul-attribute li {
-  padding-left: 30px;
-  height: 30px;
-  line-height: 30px;
-  color: #8d8e94;
+.ul-attribute > li {
+  height: 40px;
+  line-height: 40px;
 }
 
-.ul-attribute a:hover {
+.ul-attribute li a {
+  padding-left: 30px;
+  color: #8d8e94;
+  text-transform: capitalize;
+}
+
+.ul-attribute li a:hover {
   text-decoration: none;
+  color: #fff;
 }
